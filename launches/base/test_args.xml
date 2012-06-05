@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iterations>
+    <args order="1">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_1.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_1.txt"/>
+        <arg order="3" value="/home/hadoop/result/base/simple_result_1"/>
+        <arg order="4" value="/home/hadoop/result/base/join_result_1"/>
+    </args>
+    <args order="2">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_2.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_2.txt"/>
+        <arg order="3" value="/home/hadoop/result/base/simple_result_2"/>
+        <arg order="4" value="/home/hadoop/result/base/join_result_2"/>
+    </args>
+    <args order="3">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_3.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_3.txt"/>
+        <arg order="3" value="/home/hadoop/result/base/simple_result_3"/>
+        <arg order="4" value="/home/hadoop/result/base/join_result_3"/>
+    </args>
+    <args order="4">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_4.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_4.txt"/>
+        <arg order="3" value="/home/hadoop/result/base/simple_result_4"/>
+        <arg order="4" value="/home/hadoop/result/base/join_result_4"/>
+    </args>
+    <args order="5">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_5.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_5.txt"/>
+        <arg order="3" value="/home/hadoop/result/base/simple_result_5"/>
+        <arg order="4" value="/home/hadoop/result/base/join_result_5"/>
+    </args>
+    <args order="6">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_6.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_6.txt"/>
+        <arg order="3" value="/home/hadoop/result/base/simple_result_6"/>
+        <arg order="4" value="/home/hadoop/result/base/join_result_6"/>
+    </args>
+    <args order="7">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_7.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_7.txt"/>
+        <arg order="3" value="/home/hadoop/result/base/simple_result_7"/>
+        <arg order="4" value="/home/hadoop/result/base/join_result_7"/>
+    </args>
+    <args order="8">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_8.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_8.txt"/>
+        <arg order="3" value="/home/hadoop/result/base/simple_result_8"/>
+        <arg order="4" value="/home/hadoop/result/base/join_result_8"/>
+    </args>
+    <args order="9">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_9.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_8.txt"/>
+        <arg order="3" value="/home/hadoop/result/base/simple_result_9"/>
+        <arg order="4" value="/home/hadoop/result/base/join_result_9"/>
+    </args>
+    <args order="10">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_10.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_8.txt"/>
+        <arg order="3" value="/home/hadoop/result/base/simple_result_10"/>
+        <arg order="4" value="/home/hadoop/result/base/join_result_10"/>
+    </args>
+
+</iterations>

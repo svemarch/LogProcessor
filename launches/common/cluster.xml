@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <mode>distributed</mode>
+    <description>Cluster of four virtual machines.</description>
+    <nodesCount>4</nodesCount>
+</cluster>

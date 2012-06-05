@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <mode>bucketing_partitioned_regex_serde</mode>
+    <description>use partitioned buckets for storing raw data and RegexSerde</description>
+
+    <cluster>
+        <file>/home/hadoop/executor/launches/common/cluster.xml</file>
+    </cluster>
+
+    <warehouse>
+        <type>hive</type>
+        <name>default</name>
+        <description>hive bases on HDFS</description>
+    </warehouse>
+
+    <tasks>
+        <file>/home/hadoop/executor/launches/common/tasks.xml</file>
+    </tasks>
+    <scenario>
+        <scripts>
+            <pre></pre>
+            <post></post>
+        </scripts>
+        <loader>
+            <init>
+                <need>true</need>
+                <iterative>false</iterative>
+            </init>
+            <executor>bucketing.partitioned.serde.Loader</executor>
+            <mode>partitioned_buckets</mode>
+            <iterations>
+                <file>/home/hadoop/executor/launches/common/primaryData.raw.xml</file>
+            </iterations>
+        </loader>
+
+        <tests>
+            <test>
+                <mode>partitioned_buckets_join</mode>
+                <tasks>
+                    <task>
+                        <name>join_task</name>
+                        <executor>bucketing.JoinTask</executor>
+                    </task>
+                    <task>
+                        <name>access_task</name>
+                        <executor>ordinary.separated.AccessTask</executor>
+                    </task>
+                </tasks>
+            </test>
+
+        </tests>
+
+    </scenario>
+
+</launch>

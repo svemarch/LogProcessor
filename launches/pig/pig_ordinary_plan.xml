@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <mode>ordinary</mode>
+    <description>use only standard optimizator</description>
+
+    <cluster>
+        <file>/home/hadoop/executor/launches/common/cluster.xml</file>
+    </cluster>
+
+    <warehouse>
+        <type>pig</type>
+        <name>default</name>
+        <description>pig bases on HDFS</description>
+    </warehouse>
+
+    <tasks>
+        <file>/home/hadoop/executor/launches/common/tasks.xml</file>
+    </tasks>
+    <scenario>
+        <reports>
+            <path>/home/hadoop/executor/results</path>
+
+            <measure task="load_task">import_request</measure>
+
+            <measure task="simple_task">aggregation</measure>
+
+            <measure task="join_task">join</measure>
+            <measure task="join_task">whole_task</measure>
+
+            <measure task="access_task">select(3)</measure>
+
+        </reports>
+        <scripts>
+            <pre></pre>
+            <post></post>
+        </scripts>
+
+        <tests>
+            <iterations>
+                <file>/homehadoop/executor/launches/pig/primaryData.preprocessed.pig_path.xml</file>
+            </iterations>
+            <test>
+                <iterative>true</iterative>
+                <mode>optimizer_on</mode>
+                <description>run all task with using standard optimizer</description>
+                <runner>ordinary.Test</runner>
+                <tasks>
+                    <task>
+                        <name>simple_task</name>
+                    </task>
+                    <task>
+                        <name>join_task</name>
+                    </task>
+                    <task>
+                        <name>access_task</name>
+                    </task>
+                </tasks>
+            </test>
+
+        </tests>
+
+    </scenario>
+
+</launch>

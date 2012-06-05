@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iterations>
+    <args order="1">
+        <arg order="1" value="reqans-log-raw_1.txt"/>
+        <arg order="2" value="redir-log-raw_1.txt"/>
+    </args>
+    <args order="2">
+        <arg order="1" value="reqans-log-raw_2.txt"/>
+        <arg order="2" value="redir-log-raw_2.txt"/>
+    </args>
+</iterations>

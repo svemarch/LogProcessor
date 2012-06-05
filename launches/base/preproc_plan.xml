@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <mode>multithread_preprocess_data</mode>
+    <description>firstofall all data are preprocessed and then loaded into rdbms</description>
+
+    <cluster>
+        <file>/home/hadoop/executor/launches/common/cluster.xml</file>
+    </cluster>
+
+    <warehouse>
+        <type>mysql</type>
+        <name>default</name>
+        <description>RDBMS with data preprocessing</description>
+    </warehouse>
+
+    <tasks>
+        <file>/home/hadoop/executor/launches/common/tasks.xml</file>
+    </tasks>
+    <scenario>
+        <reports>
+            <path>/home/hadoop/executor/results</path>
+
+            <measure task="load_task">import_request</measure>
+
+            <measure task="simple_task">aggregation</measure>
+
+            <measure task="join_task">join</measure>
+            <measure task="join_task">whole_task</measure>
+
+            <measure task="access_task">select(3)</measure>
+
+        </reports>
+        <scripts>
+            <pre></pre>
+            <post></post>
+        </scripts>
+
+        <tests>
+            <iterations>
+                <file>/home/hadoop/executor/launches/base/test_args.xml</file>
+            </iterations>
+            <test>
+                <reports>
+                    <path>/home/svemarch/reports</path>
+                    <measure task="taskName">measureName</measure>
+                    <measure task="taskName">measureName1</measure>
+                </reports>
+                <iterative>true</iterative>
+                <mode>multithreading</mode>
+                <description>run all task using multithreading preprocessing</description>
+                <runner>tasks.Test</runner>
+                <tasks>
+                    <task>
+                        <name>load_task</name>
+                    </task>
+                    <task>
+                        <name>simple_task</name>
+                    </task>
+                    <task>
+                        <name>join_task</name>
+                    </task>
+                    <task>
+                        <name>access_task</name>
+                    </task>
+                </tasks>
+            </test>
+
+        </tests>
+
+    </scenario>
+
+</launch>

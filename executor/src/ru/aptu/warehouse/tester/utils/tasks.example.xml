@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks>
+    <task>
+        <name>loadTask</name>
+        <description>This task is responsible for import source data</description>
+        <type>load</type>
+        <measures>
+            <measure>
+                <name>import</name>
+                <description>import data into table</description>
+            </measure>
+            <measure>
+                <name>tmp_import</name>
+                <description>import data into temporary table</description>
+            </measure>
+            <measure>
+                <name>dest_import</name>
+                <description>import data from temporary into destination table</description>
+            </measure>
+        </measures>
+    </task>
+    <task>
+        <name>simple_task</name>
+        <description>This task is based on one source and uses aggregation</description>
+        <type>process</type>
+        <measures>
+            <measure>
+                <name>aggregation</name>
+                <description>count operation, group by 4 params</description>
+            </measure>
+        </measures>
+    </task>
+    <task>
+        <name>join_task</name>
+        <description>This task is based on two sources, uses join and aggregation</description>
+        <type>process</type>
+        <measures>
+            <measure>
+                <name>join</name>
+                <description>join by 3 params</description>
+            </measure>
+            <measure>
+                <name>aggregation</name>
+                <description>count operation, group by 5 params</description>
+            </measure>
+        </measures>
+    </task>
+    <task>
+        <name>access_task</name>
+        <description>This task is for measure access to data by using different operations: filters, aggregation, sorting</description>
+        <type>process</type>
+        <measures>
+            <measure>
+                <name>select(2)</name>
+                <description>select with 2 filters</description>
+            </measure>
+            <measure>
+                <name>select(3)</name>
+                <description>select with all (3) filters</description>
+            </measure>
+            <measure>
+                <name>all(sort)</name>
+                <description>all filters and sorting</description>
+            </measure>
+            <measure>
+                <name>all(aggregate)</name>
+                <description>"all filters and aggregating</description>
+            </measure>
+        </measures>
+    </task>
+
+</tasks>

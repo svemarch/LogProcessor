@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iterations>
+    <args order="1">
+        <arg order="1" value="/home/svemarch/projects/git/LogProcessor/data/reqans-log-raw.txt"/>
+        <arg order="2" value="/home/svemarch/projects/git/LogProcessor/data/redir-log-raw.txt"/>
+    </args>
+
+</iterations>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iterations>
+    <args order="1">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_1.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_1.txt"/>
+    </args>
+    <args order="2">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_2.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_2.txt"/>
+    </args>
+    <args order="3">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_3.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_3.txt"/>
+    </args>
+    <args order="4">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_4.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_4.txt"/>
+    </args>
+    <args order="5">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_5.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_5.txt"/>
+    </args>
+    <args order="6">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_6.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_6.txt"/>
+    </args>
+    <args order="7">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_7.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_7.txt"/>
+    </args>
+    <args order="8">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_8.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_8.txt"/>
+    </args>
+    <args order="9">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_9.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_8.txt"/>
+    </args>
+    <args order="10">
+        <arg order="1" value="/home/hadoop/logs/preprocessed/reqans_10.txt"/>
+        <arg order="2" value="/home/hadoop/logs/preprocessed/redir_8.txt"/>
+    </args>
+
+</iterations>

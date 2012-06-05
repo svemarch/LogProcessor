@@ -1,0 +1,17 @@
+db.url=jdbc:mysql://localhost/datastorage_tests
+db.username=root
+db.pwd=
+db.driver.class=org.gjt.mm.mysql.Driver
+
+create.log.tables=true
+log.path=/home/svemarch/projects/git/LogProcessor/data/logs_for_hadoop/reqans/reqans_1.txt
+log.records.count=100000
+joinLog.path=/home/svemarch/projects/git/LogProcessor/data/logs_for_hadoop/redir/redir_1.txt
+joinLog.records.count=100000
+
+technology=hive
+mode=ordinary.separated
+
+cluster.mode=pseudo-distributed
+cluster.nodes.count=1
+

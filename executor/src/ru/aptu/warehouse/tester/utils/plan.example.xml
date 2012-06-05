@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <mode>ordinary</mode>
+    <description>without any storage structure optimization</description>
+
+    <cluster>
+        <file>cluster.example.xml</file>
+    </cluster>
+
+    <warehouse>
+        <type>hive</type>
+        <name>default</name>
+        <description>hive bases on HDFS</description>
+    </warehouse>
+
+    <tasks>
+        <file>tasks.example.xml</file>
+    </tasks>
+
+    <scenario>
+        <reports>
+            <path></path>
+            <measure task="taskName">measureName</measure>
+            <measure task="taskName">measureName1</measure>
+        </reports>
+        <scripts>
+            <pre></pre>
+            <post></post>
+        </scripts>
+        <loader>
+            <init>
+                <need>true</need>
+                <iterative>false</iterative>
+            </init>
+            <executor></executor>
+            <mode></mode>
+            <iterations>
+                <file>primaryData.example.xml</file>
+            </iterations>
+        </loader>
+
+        <tests>
+            <iterations>
+                <file>primaryData.example.xml</file>
+            </iterations>
+            <test>
+                <runner></runner>
+                <mode></mode>
+                <description></description>
+                <tasks>
+                    <task>
+                        <name></name>
+                        <mode></mode>
+                    </task>
+                    <task>
+                        <name></name>
+                        <mode></mode>
+                    </task>
+                </tasks>
+            </test>
+
+            <test>
+
+                <mode></mode>
+                <description></description>
+                <tasks>
+                    <task>
+                        <name></name>
+                        <executor></executor>
+                        <mode></mode>
+                    </task>
+                </tasks>
+
+                <reports>
+                    <path></path>
+                    <measure task="taskName">measureName</measure>
+                    <measure task="taskName">measureName1</measure>
+                </reports>
+            </test>
+        </tests>
+
+    </scenario>
+
+</launch>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <mode>bucketing_partitioned</mode>
+    <description>use partitioned buckets for storing preprocessed data and optimize join</description>
+
+    <cluster>
+        <file>/home/hadoop/executor/launches/common/cluster.xml</file>
+    </cluster>
+
+    <warehouse>
+        <type>hive</type>
+        <name>default</name>
+        <description>hive bases on HDFS</description>
+    </warehouse>
+
+    <tasks>
+        <file>/home/hadoop/executor/launches/common/tasks.xml</file>
+    </tasks>
+    <scenario>
+        <reports>
+            <path>/home/hadoop/executor/results</path>
+
+            <measure task="load_task">import_request</measure>
+
+            <measure task="join_task">join</measure>
+            <measure task="join_task">whole_task</measure>
+
+            <measure task="access_task">select(3)</measure>
+
+        </reports>
+        <scripts>
+            <pre></pre>
+            <post></post>
+        </scripts>
+        <loader>
+            <init>
+                <need>true</need>
+                <iterative>false</iterative>
+            </init>
+            <executor>bucketing.partitioned.Loader</executor>
+            <mode>partitioned_buckets</mode>
+            <iterations>
+                <file>/home/hadoop/executor/launches/common/primaryData.preprocessed.xml</file>
+            </iterations>
+        </loader>
+
+        <tests>
+            <test>
+                <mode>partitioned_buckets_join</mode>
+                <description>run join task on bucketed logs</description>
+                <tasks>
+                    <task>
+                        <name>join_task</name>
+                        <executor>bucketing.JoinTask</executor>
+                    </task>
+                    <task>
+                        <name>access_task</name>
+                        <executor>ordinary.separated.AccessTask</executor>
+                    </task>
+                </tasks>
+            </test>
+
+        </tests>
+
+    </scenario>
+
+</launch>

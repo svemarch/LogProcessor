@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: /home/svemarch/soft/hadoop/hadoop-1.0.0/conf/core-site.xml
+Main-Class: Runner
+

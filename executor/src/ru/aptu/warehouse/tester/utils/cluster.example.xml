@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <mode>pseudo-distributed</mode>
+    <description>The Hadoop daemons run on the local machine,
+        thus simulating a cluster on a small scale.
+    </description>
+    <nodesCount>1</nodesCount>
+</cluster>

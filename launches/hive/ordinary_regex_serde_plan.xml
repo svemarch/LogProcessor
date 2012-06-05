@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <mode>ordinary_regex_serde</mode>
+    <description>without any storage structure optimization</description>
+
+    <cluster>
+        <file>/home/hadoop/executor/launches/common/cluster.xml</file>
+    </cluster>
+
+    <warehouse>
+        <type>hive</type>
+        <name>default</name>
+        <description>hive bases on HDFS</description>
+    </warehouse>
+
+    <tasks>
+        <file>/home/hadoop/executor/launches/common/tasks.xml</file>
+    </tasks>
+    <scenario>
+        <scripts>
+            <pre></pre>
+            <post></post>
+        </scripts>
+        <loader>
+            <init>
+                <need>true</need>
+                <iterative>false</iterative>
+            </init>
+            <executor>ordinary.serde.RegexSerdeLoadExecutor</executor>
+            <mode>ordinary</mode>
+            <iterations>
+                <file>/home/hadoop/executor/launches/common/primaryData.raw.xml</file>
+            </iterations>
+        </loader>
+
+        <tests>
+            <test>
+                <mode>separated</mode>
+                <description>all tasks are performed separately from each other</description>
+                <tasks>
+                    <task>
+                        <name>simple_task</name>
+                        <executor>ordinary.separated.SimpleTask</executor>
+                    </task>
+                    <task>
+                        <name>join_task</name>
+                        <executor>ordinary.separated.JoinTask</executor>
+                    </task>
+                    <task>
+                        <name>access_task</name>
+                        <executor>ordinary.separated.AccessTask</executor>
+                    </task>
+                </tasks>
+            </test>
+            <test>
+                <mode>subquery</mode>
+                <description>join task is performed with one request using subquery</description>
+                <tasks>
+                    <task>
+                        <name>join_task</name>
+                        <executor>ordinary.subquery.JoinTask</executor>
+                    </task>
+                </tasks>
+            </test>
+            <test>
+                <mode>multitable</mode>
+                <description>read common source table once for all tasks</description>
+                <tasks>
+                    <task>
+                        <name>two_part_task</name>
+                        <mode>multitable</mode>
+                        <executor>ordinary.multitable.MultitableExecutor</executor>
+                    </task>
+                    <task>
+                        <name>two_part_task</name>
+                        <mode>separate</mode>
+                        <executor>ordinary.multitable.SeparateExecutor</executor>
+                    </task>
+                </tasks>
+            </test>
+
+        </tests>
+
+    </scenario>
+
+</launch>
